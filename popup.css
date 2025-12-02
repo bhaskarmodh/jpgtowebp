@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f9fafb;
+  --text-color: #1f2937;
+  --border-color: #e5e7eb;
+  --success-color: #10b981;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--text-color);
+}
+
+.drop-zone {
+  width: 100%;
+  height: 150px;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: var(--primary-color);
+  background-color: #eef2ff;
+}
+
+.drop-zone p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.file-label {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-label:hover {
+  background-color: var(--primary-hover);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#preview-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.preview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.preview-box img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 5px;
+}
+
+.preview-box p {
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.preview-box span {
+  font-size: 0.7rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #9ca3af;
+}
+
+#actions {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary-btn {
+  background-color: white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+  background-color: #f3f4f6;
+}
